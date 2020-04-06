@@ -1,0 +1,4 @@
+rootProject.name='4SClient'
+include ':app'
+include ':feature:main'
+include ':core'
