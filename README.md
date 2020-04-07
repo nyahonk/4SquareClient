@@ -12,6 +12,7 @@
 ## Стек
 
 * Kotlin
+* Clean Architecture
 * Multi-Module Architecture
 * Dagger 2
 * RxJava 2
