@@ -20,6 +20,5 @@ class DBModule {
 
     @Provides
     @Singleton
-    fun provideDatabaseDao(database: DataBase): VenuesDao =
-        database.venuesDao()
+    fun provideDatabaseDao(database: DataBase): VenuesDao = database.venuesDao()
 }

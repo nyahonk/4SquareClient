@@ -19,14 +19,16 @@ class VenuesRepository @Inject constructor(
     fun getNearbyVenues(ll: String): Single<List<Venue>> =
         api.getNearbyVenues(ll, BuildConfig.CLIENT_ID, BuildConfig.CLIENT_SECRET, resourcesProvider.getCurrentDateForRequest())
             .flatMap { response ->
-                localDb.venuesDao().insertVenuesBody(response.response)
-                Single.just(response.response.venues)
+                localDb.venuesDao()
+                    .insertVenuesBody(response.response)
+                    .map {
+                    response.response.venues
+                }
             }
             .onErrorResumeNext(
-                localDb.venuesDao().getVenuesBody()
-                    .flatMap {
-                        Single.just(it.venues)
-                    }
+                localDb.venuesDao()
+                    .getVenuesBody()
+                    .map { it.venues }
             )
 
 

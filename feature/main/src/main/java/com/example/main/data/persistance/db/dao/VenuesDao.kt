@@ -14,7 +14,7 @@ interface VenuesDao {
     fun getVenuesBody(): Single<VenuesBody>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertVenuesBody(exchangeRatesEntity: VenuesBody): Single<Long>
+    fun insertVenuesBody(venuesBody: VenuesBody): Single<Long>
 
     @Query("DELETE FROM VenuesEntity")
     fun deleteVenuesBody()
