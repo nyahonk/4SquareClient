@@ -1,15 +1,15 @@
 # 4SquareClient
 
-Приложение показывает места рядом с пользователем.
+The application shows points of interest near the user.
 
-## Описание
+## Description
 
-Приложение показывает места рядом с пользователем списком и пинами на карте.
-Местоположение получает с помощью встроенных инструментов геолокации, карты использовались от гугла.
+Points of interest are displayed as pins on the map (Google Maps). 
+Location data is retrieved via Google Play Services.
 
-Для получения данных испольхуется [API FourSquare](https://developer.foursquare.com/docs/places-api/)
+Data is fetched from [API FourSquare](https://developer.foursquare.com/docs/places-api/)
 
-## Стек
+## Techonolies used
 
 * Kotlin
 * Clean Architecture
